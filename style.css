@@ -72,17 +72,19 @@ nav{
     background-color: transparent;
 
     color: var(--color-white);
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-left: 1rem;
+    letter-spacing: 1px;
 }
 .input-search:focus-visible{
-    color: rgba(255, 255, 255, .7);
+    /* color: rgba(255, 255, 255, .6); */
     outline: none;
 }
 .input-search::placeholder{
     color: var(--color-white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
+    letter-spacing: 0;
 }
 .button-search{
     color: var(--color-white);
@@ -101,4 +103,81 @@ nav{
         background-color: rgba(255, 255, 255, .05);
         color: rgba(255, 255, 255, .95);
     }
+}
+
+.output{
+    padding-top: 5rem;
+}
+
+.card{
+    width: 350px;
+    height: max-content;
+    margin: auto;
+    background-color: var(--color-gray);
+    border: 2px solid var(--color-light-gray);
+    border-radius: .5rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card-user-info{
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+}
+.card-img{
+    width: 80px;
+    border-radius: .5rem;
+}
+.card-title{
+    display: flex;
+    flex-direction: column;
+}
+.card-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.card-name + span {
+    font-size: 1.1rem;
+    color: var(--color-white);
+}
+
+.card-body{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    & .card-item{
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: var(--color-white);
+        & span:nth-child(2){
+            color: rgba(255, 255, 255, .8);
+        }
+    }
+
+    & .item-link{
+        margin-top: 1rem;
+        border: 1px solid var(--color-light-blue);
+        border-radius: .5rem;
+        background-color: var(--color-blue);
+        padding: .5rem;
+        font-size: 1rem;
+
+        & a {
+            color: var(--color-light-blue);
+        }
+    }
+}
+
+.warn{
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: max-content;
+    padding: 1rem;
 }
