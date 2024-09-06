@@ -1,13 +1,22 @@
-import { input, searchButton, output } from "./components.mjs";
+import { inputSearch, searchButton, output } from "./components.mjs";
 
 export function handleKey(event){
     if(event.key === "Enter"){
         search()
     }
 }
+export function handleKeyBar(event){
+    if(event.key === "/"){
+        console.log(event.key)
+        inputSearch.focus()
+        setTimeout(()=>{
+            inputSearch.value = ''
+        }, 0)
+    }
+}
 
 export function search(){
-    const user = input.value
+    const user = inputSearch.value
     console.log(user)
     output.innerHTML = `
         <div class="card warn">
