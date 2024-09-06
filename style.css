@@ -25,17 +25,23 @@ body{
 nav{
     background-color: var(--color-dark);
     padding: 1.3rem;
-
     display: flex;
-    align-items: center;
-    gap: .5rem;
-
+    justify-content: space-between;
+    /* align-items: center; */
     border-bottom: 1px solid var(--color-light-gray);
 
     & h1{
         font-size: 18px;
         font-weight: 500;
     }
+}
+
+.nav-title{
+    display: flex;
+    gap: .5rem;
+}
+.nav-aside-title{
+    color: var(--color-white);
 }
 
 .github-icon{
