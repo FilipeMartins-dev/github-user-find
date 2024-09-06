@@ -121,6 +121,15 @@ nav{
 
     display: flex;
     flex-direction: column;
+
+    animation: openCard .2s;
+}
+
+@keyframes openCard {
+    from{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
 }
 
 .card-user-info{
