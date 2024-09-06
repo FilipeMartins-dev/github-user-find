@@ -112,7 +112,7 @@ nav{
 }
 
 .card{
-    width: 350px;
+    width: max-content;
     height: max-content;
     margin: auto;
     background-color: var(--color-gray);
