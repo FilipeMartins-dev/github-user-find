@@ -32,7 +32,7 @@ export function search(){
         data.json().then((response)=>{
             if(data.status === 404){
                 output.innerHTML = `
-                <div class="card warn">
+                <div class="card warn error">
                     User not Found
                 </div>
                 `
@@ -43,7 +43,7 @@ export function search(){
             }
             if(!data.ok){
                 output.innerHTML = `
-                <div class="card warn">
+                <div class="card warn error">
                     User not Found.
                 </div>
                 `
@@ -58,10 +58,10 @@ export function search(){
             output.innerHTML = `
             <div class="card">
                 <div class="card-user-info">
-                    <img src="${response.avatar_url}" class="card-img">
+                    <img src="${response.avatar_url}" alt="Perfil image" class="card-img">
 
                     <div class="card-title">
-                        <span class="card-name">${response.name}</span>
+                        <span class="card-name">${response.login}</span>
                         <span>ID: ${response.id}</span>
                     </div>
                 </div>
@@ -69,8 +69,8 @@ export function search(){
                     
                 <div class="card-body">
                 <span class="card-item">
-                        <span>User:</span>
-                        <span>${response.login}</span>
+                        <span>Name:</span>
+                        <span>${response.name ? response.name : "-"}</span>
                     </span>
                     <span class="card-item">
                         <span>Followers:</span>
@@ -82,7 +82,7 @@ export function search(){
                     </span>
                     <span class="card-item">
                         <span>Location:</span>
-                        <span>${response.location}</span>
+                        <span>${response.location ? response.location : "-"}</span>
                     </span>
                     <span class="card-item">
                         <span>Public repositories:</span>
@@ -90,7 +90,7 @@ export function search(){
                     </span>
                     <span class="card-item item-link">
                         <span>Perfil:</span>
-                        <span> <a target="_blank" href="${response.html_url}">${response.html_url}</span>
+                        <span> <a target="_blank" href="${response.html_url}">${response.html_url}</a></span>
                     </span>
                     
                 </div>

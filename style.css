@@ -12,6 +12,8 @@
     --color-white: #9198A1;
     --color-blue: #121D2F;
     --color-light-blue: #3B659E;
+    --color-red: #6B2A2B;
+    --color-light-red: #e03c3c;
 }
 
 body{
@@ -180,4 +182,11 @@ nav{
     width: 180px;
     height: max-content;
     padding: 1rem;
+}
+
+.error{
+    border: 2px solid var(--color-light-gray);
+    color: var(--color-light-red);
+    font-weight: bolder;
+    letter-spacing: .02rem;
 }
